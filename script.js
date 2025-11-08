@@ -1,30 +1,32 @@
-let userInput;
-let userLimit;
+document.getElementById("runScript-hw2").addEventListener("click", () => {
+      let userInput;
+      let userLimit;
 
-do {
-  userInput = prompt("Enter a number, or '0' to exit");
-  userLimit = parseFloat(userInput);
-  
-  if(userLimit === 0){
-    alert("Goodbye!");
-    break;
-  }
-  if (!isNaN(userLimit)) {
-    const finalNumbers = [];
+      do {
+        userInput = prompt("Enter a number to start, or enter '0' to exit");
+        userLimit = parseFloat(userInput);
+        
+        if(userLimit === 0){
+            alert("Goodbye!");
+            break;
+        }
+        if (!isNaN(userLimit)) {
+          const finalNumbers = [];
 
-    for (let i = 1; i <= userLimit; i++) {
-      if (i % 5 === 0) {
-        finalNumbers.push(i);
-      }
-    }
+          for (let i = 1; i <= userLimit; i++) {
+            if (i % 5 === 0) {
+              finalNumbers.push(i);
+            }
+          }
 
-    if (finalNumbers.length === 0 & userLimit !== 0) {
-      alert('Sorry, no numbers');
-    } else {
-      alert(`Your numbers are: ${finalNumbers.join(', ')}`);
-    }
-  } else {
-    alert("Not a number! Reload and try again.");
-  }
+          if (finalNumbers.length === 0) {
+            alert('Sorry, no numbers');
+          } else {
+            alert(`Your numbers are: ${finalNumbers.join(', ')}`);
+          }
+        } else {
+          alert("Not a number! Reload and try again.");
+        }
 
-} while (!Number.isInteger(userLimit));
+      } while (!Number.isInteger(userLimit));
+});

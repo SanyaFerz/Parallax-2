@@ -258,12 +258,51 @@ header{
     font-weight: 600;
     text-transform: uppercase;
 }
+.js-hw{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url(images/js-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    width: 100%;
+    clip-path: polygon(50% 15%, 100% 0, 100% 85%, 50% 100%, 0 85%, 0 0);
+    padding: 200px 0 300px 0;
+}
+.js-hw .title{
+    display: flex;
+    color: #14afca;
+    font-size: 60px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 70px;
+}
+.js-hw .title span{
+    color: yellow;
+    margin-right: 10px;
+}
+.js-hw .buttons{
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+.js-hw .buttons button{
+    color: #fff;
+    border: none;
+    padding: 20px 30px;
+    border-radius: 5px;
+    background-color: #14afca;
+    border-bottom: 5px solid #118c9e;
+    text-transform: uppercase;
+}
 footer{
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    margin-bottom: 104px;
+    margin: 104px 0;
 }
 footer p{
     font-size: 15px;
